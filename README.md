@@ -1,6 +1,6 @@
 # Getting Started with User App
 
-User app displays 20 profiles of the randome users. It supports following actions:\
+User app displays 20 profiles of the random users. It supports following actions:\
 
 1. Add Profile(s) - Adds 1 or 2 or 3 ... (n) new profiles if clicked 1 or 2 or ... (n) number of times respectively.
 
