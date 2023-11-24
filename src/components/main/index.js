@@ -25,7 +25,7 @@ const Main = () => {
   );
 
   const debouncedGetUserData = useMemo(
-    () => debounce((count) => getUserData(count), 500),
+    () => debounce((count) => getUserData(count), 300),
     [getUserData]
   );
 
