@@ -1,0 +1,24 @@
+.profileHeader {
+  background-color: rgb(50, 50, 50);
+  padding: 0 10px;
+}
+
+.profileHeader h1 {
+  color: #fff;
+}
+
+.profileContainer {
+  padding: 0 10%;
+}
+
+.profileActions {
+  padding: 10px;
+}
+
+.profileActions button {
+  margin: 5px;
+}
+
+.profileItem {
+  padding: 0 5px 10px;
+}
