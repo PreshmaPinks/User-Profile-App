@@ -26,7 +26,6 @@ const UserProfile = ({ userData, deleteProfile }) => {
             onClick={() => deleteProfile(userData.id)}
           />
         </Popover>,
-        ,
         <Popover
           content={<ShowMoreUserInfo userData={userData} />}
           title={`More info on ${userData?.name?.first}`}

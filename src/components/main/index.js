@@ -2,7 +2,7 @@ import React, { useState, useMemo, useCallback, useEffect } from "react";
 import { Row, Col, Button } from "antd";
 import { getUser } from "../../services/userServices";
 import UserProfile from "../userProfile";
-import { INITIAL_RESULT_COUNT } from "../constants";
+import { INITIAL_RESULT_COUNT } from "../../constants";
 import { debounce } from "./utils";
 import "./index.css";
 
@@ -12,11 +12,10 @@ const Main = () => {
   const [addtionalProfileCount, setAddtionalProfileCount] = useState(0);
 
   const getUserData = useCallback(
-    async (count) => {
+    async (profileCount) => {
       try {
-        const data = await getUser(count);
-        setUsers(users ? [...data.results, ...users] : [...data.results]);
-
+        const data = await getUser(profileCount);
+        setUsers(users ? [...users, ...data.results] : [...data.results]);
         setError(null);
       } catch (e) {
         setError(e);
