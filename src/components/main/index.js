@@ -46,6 +46,15 @@ const Main = () => {
     debouncedGetUserData(addtionalProfileCount + 1);
   };
 
+  const deleteProfile = (userId) => {
+    const newUsers = users?.filter((item) => {
+      return userId.value !== item.id.value;
+    });
+    if (newUsers) {
+      setUsers(newUsers);
+    }
+  };
+
   return (
     <div>
       <Row className="profileHeader">
@@ -70,7 +79,7 @@ const Main = () => {
               className="profileItem"
               key={`${item?.id?.value}-${index}`}
             >
-              <UserProfile userData={item} />
+              <UserProfile userData={item} deleteProfile={deleteProfile} />
             </Col>
           );
         })}
